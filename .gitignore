@@ -1,0 +1,4 @@
+node_modules
+.env.development
+uploadedImages
+package-lock.json

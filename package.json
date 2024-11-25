@@ -1,0 +1,55 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is a Customer Relationship Management System.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon src/index.js",
+    "start:prod": "cross-env NODE_ENV=production nodemon src/index.js",
+    "db:create": "cross-env NODE_ENV=development sequelize-cli db:create",
+    "db:migrate": "cross-env NODE_ENV=development sequelize-cli db:migrate",
+    "db:seeds": "cross-env NODE_ENV=development sequelize-cli db:seed:all",
+    "db:seed": "cross-env NODE_ENV=development sequelize-cli db:seed --seed",
+    "db:g:seed": "cross-env NODE_ENV=development sequelize-cli seed:generate --name",
+    "db:drop": "cross-env NODE_ENV=development sequelize-cli db:drop",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:snskr": "cross-env NODE_ENV=development sequelize-cli db:drop && cross-env NODE_ENV=development sequelize-cli db:create &&cross-env NODE_ENV=development sequelize-cli db:migrate && cross-env NODE_ENV=development sequelize-cli db:seed:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insteptech/mycrm.git"
+  },
+  "keywords": [
+    "crm",
+    "system"
+  ],
+  "author": "Sanskar Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/insteptech/mycrm/issues"
+  },
+  "homepage": "https://github.com/insteptech/mycrm#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "http-status": "^1.7.4",
+    "joi": "^17.12.3",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.4",
+    "path": "^0.12.7",
+    "pg": "^8.11.5",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.2",
+    "sequelize-cli": "^6.6.2",
+    "xlsx": "^0.18.5",
+    "yarn": "^1.22.22"
+  }
+}
